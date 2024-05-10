@@ -6,8 +6,6 @@ const SectionHeader: React.FC<{ text: string; reverse?: boolean }> = ({
   text,
   reverse = false,
 }) => {
-  let margin = reverse ? { ml: 2 } : { mr: 2 };
-
   return (
     <Reveal width="100%">
       <Box

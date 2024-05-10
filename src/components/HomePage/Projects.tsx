@@ -53,6 +53,7 @@ const Projects: React.FC = () => {
       >
         {projects.map((p) => (
           <Paper
+            key={p.name}
             sx={{
               textAlign: 'center',
               border: '2px solid',

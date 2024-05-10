@@ -1,33 +1,68 @@
 import { Box, Link, Typography } from '@mui/material';
 import Carousel from 'nuka-carousel';
 import Carro1 from '../Assets/carro-1.png';
+import Carro2 from '../Assets/carro-2.png';
 import Carro3 from '../Assets/carro-3.png';
 import Carro4 from '../Assets/carro-4.png';
+import Carro5 from '../Assets/carro-5.png';
+import Carro6 from '../Assets/carro-6.png';
+import Carro7 from '../Assets/carro-7.png';
+import Carro8 from '../Assets/carro-8.png';
 
 const images = [
   {
     name: 'Directory',
     url: Carro1,
     description:
-      'Supplier page where retailers can partner with brand and add their products.',
+      'Home page of directory where a retailer can see featured brands, recommended brands/products, and favorited brands/products.',
   },
   {
-    name: 'Reporting',
+    name: 'Directory',
+    url: Carro2,
+    description:
+      'Product view in the directory where user can search, filter, or choose a category to narrow down product results.',
+  },
+  {
+    name: 'Directory',
     url: Carro3,
     description:
-      'Reporting tool built for Retailers/Suppliers to see their KPIs.',
+      'Brand page view in the directory where user can search, filter, or choose a category to narrow down product results supplied by this brand.',
+  },
+  {
+    name: 'Partners',
+    url: Carro4,
+    description:
+      'Partner page for Retailers/Suppliers to see their current partners. Additional details displayed via accordion style row expansion.',
   },
   {
     name: 'Requests',
-    url: Carro4,
+    url: Carro5,
     description:
       'Requests page for Retailers/Suppliers to see incoming requests. Additional details displayed via accordion style row expansion.',
+  },
+  {
+    name: 'Product Control System',
+    url: Carro6,
+    description:
+      'Supplier page to allow them to update pricing, revenue splits, sales events for their retailer partners selling added products.',
+  },
+  {
+    name: 'Reporting',
+    url: Carro7,
+    description:
+      'Reporting tool built for Retailers/Suppliers to visualize their KPIs.',
+  },
+  {
+    name: 'Settings',
+    url: Carro8,
+    description:
+      'Settings page allowing for updates to general, retailer, supplier, or subscription related Carro settings.',
   },
 ];
 
 const Carro: React.FC = () => {
   return (
-    <Box maxWidth="1000px" margin="0 auto">
+    <Box maxWidth="1100px" margin="0 auto">
       <Box mb={1}>
         <Typography variant="h1">Carro</Typography>
         <Typography>
@@ -43,7 +78,7 @@ const Carro: React.FC = () => {
           .
           <br />
           <br />
-          Below are some screenshots of portions of the app I worked on
+          Below are some screenshots of the areas in the app I worked on
           directly:
         </Typography>
       </Box>
@@ -60,8 +95,8 @@ const Carro: React.FC = () => {
           {images.map((image) => (
             <img
               key={image.name}
-              height={600}
-              width={1000}
+              height={700}
+              width={1100}
               src={image.url}
               alt="test"
             />
