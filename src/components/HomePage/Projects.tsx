@@ -94,45 +94,45 @@ const Projects: React.FC = () => {
               >
                 {p.businessImage}
               </Box>
+              <Box>
+                <Box p={3}>
+                  <Reveal width="100%">
+                    <Typography
+                      variant="h4"
+                      sx={{
+                        mb: 2,
+                      }}
+                    >
+                      {p.name}
+                    </Typography>
+                  </Reveal>
+                  <Reveal>
+                    <Typography>{p.description}</Typography>
+                  </Reveal>
+                </Box>
+                <Box height={50} />
+                <Box
+                  position="absolute"
+                  bottom={10}
+                  width="100%"
+                  left="50%"
+                  sx={{ transform: 'translateX(-50%)' }}
+                >
+                  <Reveal center>
+                    {p.techs.map((tech) => (
+                      <Chip
+                        key={tech}
+                        variant="outlined"
+                        color="secondary"
+                        size="small"
+                        label={tech}
+                        sx={{ mr: 1, mb: 1 }}
+                      />
+                    ))}
+                  </Reveal>
+                </Box>
+              </Box>
             </Link>
-            <Box>
-              <Box p={3}>
-                <Reveal width="100%">
-                  <Typography
-                    variant="h4"
-                    sx={{
-                      mb: 2,
-                    }}
-                  >
-                    {p.name}
-                  </Typography>
-                </Reveal>
-                <Reveal>
-                  <Typography>{p.description}</Typography>
-                </Reveal>
-              </Box>
-              <Box height={50} />
-              <Box
-                position="absolute"
-                bottom={10}
-                width="100%"
-                left="50%"
-                sx={{ transform: 'translateX(-50%)' }}
-              >
-                <Reveal center>
-                  {p.techs.map((tech) => (
-                    <Chip
-                      key={tech}
-                      variant="outlined"
-                      color="secondary"
-                      size="small"
-                      label={tech}
-                      sx={{ mr: 1, mb: 1 }}
-                    />
-                  ))}
-                </Reveal>
-              </Box>
-            </Box>
           </Paper>
         ))}
       </Box>
