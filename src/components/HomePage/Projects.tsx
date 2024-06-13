@@ -1,15 +1,8 @@
-import {
-  Box,
-  Paper,
-  Divider,
-  Typography,
-  Link,
-  Chip,
-  Tooltip,
-} from '@mui/material';
+import { Box, Paper, Typography, Link, Chip } from '@mui/material';
 import SectionHeader from '../SectionHeader';
 import CarroLogo from '../../Assets/carro-logo.png';
 import KanbanLogo from '../../Assets/logo-light.svg';
+import ShieldLogo from '../../Assets/shield.svg';
 import Reveal from '../Reveal';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -37,6 +30,18 @@ const projects = [
     techs: ['MongoDB', 'Express', 'React', 'Node', 'Redux', 'Material-UI'],
     internal: false,
   },
+  {
+    businessImage: (
+      <img height={100} width={100} src={ShieldLogo} alt="Shield" />
+    ),
+    name: 'Project Shield',
+    description:
+      'Wanted to learn more about capabilities of three.js so I created a mock WWIII simulator. Simulation includes ability to send attacks from various countries and defend via our west coast defensive shield (secured by interceptors). Complex mathematics used to determine vectors from latitude/longitude data, along with determining splines to draw interactions between 2 points',
+    url: 'https://project-shield.vercel.app/',
+    github: 'https://github.com/johnnunns/project-shield',
+    techs: ['Three.js', 'React', 'Typescript', 'Vite'],
+    internal: false,
+  },
 ];
 
 const Projects: React.FC = () => {
@@ -46,7 +51,7 @@ const Projects: React.FC = () => {
       <Box
         my={4}
         display="grid"
-        gridTemplateColumns="repeat( auto-fit, minmax(300px, 1fr) )"
+        gridTemplateColumns="repeat( auto-fit, minmax(400px, 1fr) )"
         columnGap="32px"
         rowGap="32px"
         gridAutoRows="1fr"
