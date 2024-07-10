@@ -99,7 +99,7 @@ const SharedLayout: React.FC = () => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement('a');
         alink.href = fileURL;
-        alink.download = 'John Nunns Front-End Resume.pdf';
+        alink.download = 'John Nunns Resume.pdf';
         alink.click();
       });
     });

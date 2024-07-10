@@ -39,7 +39,7 @@ const projects = [
       'Wanted to learn more about capabilities of three.js so I created a mock WWIII simulator. Simulation includes ability to send attacks from various countries and defend via our west coast defensive shield (secured by interceptors). Complex mathematics used to determine vectors from latitude/longitude data, along with determining splines to draw interactions between 2 points',
     url: 'https://project-shield.vercel.app/',
     github: 'https://github.com/johnnunns/project-shield',
-    techs: ['Three.js', 'React', 'Typescript', 'Vite'],
+    techs: ['Three.js', 'React', 'Typescript', 'TailwindCSS', 'Vite'],
     internal: false,
   },
 ];
