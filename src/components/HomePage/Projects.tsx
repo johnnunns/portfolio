@@ -19,9 +19,7 @@ const projects = [
     internal: true,
   },
   {
-    businessImage: (
-      <img height={50} width={300} src={KanbanLogo} alt="Kanban" />
-    ),
+    businessImage: <img height={50} width={300} src={KanbanLogo} alt="Kanban" />,
     name: 'Kanban',
     description:
       'Project I worked on to display Full-Stack capabilities. Figma and app requirements delivered by service called Front End Mentor. This particular project had the highest difficulty rating on their site. Application is Kanban style management board with drag/drop functionality.',
@@ -31,15 +29,29 @@ const projects = [
     internal: false,
   },
   {
-    businessImage: (
-      <img height={100} width={100} src={ShieldLogo} alt="Shield" />
-    ),
+    businessImage: <img height={100} width={100} src={ShieldLogo} alt="Shield" />,
     name: 'Project Shield',
     description:
       'Wanted to learn more about capabilities of three.js so I created a mock WWIII simulator. Simulation includes ability to send attacks from various countries and defend via our west coast defensive shield (secured by interceptors). Complex mathematics used to determine vectors from latitude/longitude data, along with determining splines to draw interactions between 2 points',
     url: 'https://project-shield.vercel.app/',
     github: 'https://github.com/johnnunns/project-shield',
     techs: ['Three.js', 'React', 'Typescript', 'TailwindCSS', 'Vite'],
+    internal: false,
+  },
+  {
+    businessImage: (
+      <Box sx={{ fontFamily: 'cursive', fontSize: 50, color: '#fff' }}>
+        C
+        <Box component="span" sx={{ color: '#ff9900' }}>
+          R
+        </Box>
+      </Box>
+    ),
+    name: 'Cryto Rich',
+    description:
+      'Solved a personal issue of needing to track my crypto portfolio across multiple exchanges/wallets. Via uploading a SOL or EVM wallet address (or manual entry for non supported chains), you can track your assets easily. Currently supports active users.',
+    url: 'https://www.crypto-rich.xyz/',
+    techs: ['T3 Stack', 'Next.js', 'Typescript', 'React', 'TRPC', 'Vite', 'TailwindCSS'],
     internal: false,
   },
 ];
@@ -70,12 +82,7 @@ const Projects: React.FC = () => {
             {p.github ? (
               <Box position="absolute" top={10} right={10}>
                 <Link to={p.github} component={ReactRouterLink} target="_blank">
-                  <FontAwesomeIcon
-                    icon={faGithub}
-                    color="#fff"
-                    size="xl"
-                    style={{ marginLeft: '16px' }}
-                  />
+                  <FontAwesomeIcon icon={faGithub} color="#fff" size="xl" style={{ marginLeft: '16px' }} />
                 </Link>
               </Box>
             ) : null}
@@ -116,13 +123,7 @@ const Projects: React.FC = () => {
                   </Reveal>
                 </Box>
                 <Box height={50} />
-                <Box
-                  position="absolute"
-                  bottom={10}
-                  width="100%"
-                  left="50%"
-                  sx={{ transform: 'translateX(-50%)' }}
-                >
+                <Box position="absolute" bottom={10} width="100%" left="50%" sx={{ transform: 'translateX(-50%)' }}>
                   <Reveal center>
                     {p.techs.map((tech) => (
                       <Chip
