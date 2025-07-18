@@ -4,6 +4,7 @@ import HeadshotImage from '../../Assets/portfolio-headshot-2.png';
 import Reveal from '../Reveal';
 import Technologies from './Technologies';
 import { PrimaryColorText } from '../../commonStyledComponents';
+import yearsWorking from '../../helpers/yearsWorking';
 
 const IntroWrapper = styled(Box)({
   minHeight: '100vh',
@@ -54,19 +55,17 @@ const Intro: React.FC = () => {
           </Typography>
           <Reveal center={!md}>
             <Typography variant="h5" sx={{ mb: 2 }}>
-              Front-End&nbsp;
-              <PrimaryColorText>React</PrimaryColorText>
-              &nbsp;Developer (<PrimaryColorText>Full-Stack</PrimaryColorText>
-              &nbsp;capable)
+              Senior&nbsp;
+              <PrimaryColorText>Full-Stack</PrimaryColorText>
+              &nbsp;Engineer (<PrimaryColorText>Front-End</PrimaryColorText>&nbsp;focused)
             </Typography>
           </Reveal>
           <Reveal center={!md}>
             <Typography>
-              I've spent the last 7 years building some really cool applications
-              centered around e-commerce.
+              I've spent the last {yearsWorking} years building some really cool applications centered around
+              e-commerce.
               <br />
-              Eager to join a company that fosters a great team culture while
-              tackling complex challenges.
+              Eager to join a company that fosters a great team culture while tackling complex challenges.
               <br />
               Based in the US. Let's connect!
             </Typography>

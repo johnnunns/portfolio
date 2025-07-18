@@ -1,4 +1,4 @@
-John Nunns Full Stack/Front-End Portfolio
+John Nunns Full-Stack/Front-End Portfolio
 
 To run locally:
 
