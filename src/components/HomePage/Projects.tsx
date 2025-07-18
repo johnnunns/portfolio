@@ -58,7 +58,7 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <Box mb={20} id="projects">
+    <Box mb={20} id="projects" sx={{ scrollMarginTop: '80px' }}>
       <SectionHeader text="Projects" />
       <Box
         my={4}
